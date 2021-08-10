@@ -30,7 +30,10 @@
         </div>
         <div class="sb-sidenav-footer">
             <div class="small text-white">Logged in as:</div>
-            <div class="text-white">{{ current_user.username }} </div>
+            <div class="text-white d-flex w-100  align-items-center justify-content-between">{{ current_user.username }} 
+                <a href = "{{url_for('user.logout')}}" style="color : #fff;">
+                    <i class="fas fa-sign-out-alt" style="font-size: 20px;"></i>
+                </a></div>
         </div>
     </nav>
 </div>
