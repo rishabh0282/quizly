@@ -18,7 +18,7 @@ MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465
 MAIL_USE_SSL = True
 MAIL_USERNAME = 'getsetquizindia@gmail.com'
-MAIL_PASSWORD = 'Gsquiz123'
+MAIL_PASSWORD = 'qjajhangfxyyckhe'
 MAIL_DEFAULT_SENDER = 'getsetquizindia@gmail.com'
 # Sendgrid settings
 # SENDGRID_API_KEY='place-your-sendgrid-api-key-here'
