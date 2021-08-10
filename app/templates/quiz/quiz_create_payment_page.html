@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main class="page payment-page pt-6 ">
-	<section class="payment-form dark">
+<main class="page payment-page mt-5 pt-2 ">
+	<section class="payment-form ">
 		<div class="block-heading">
 			<h2>Payment</h2>
 			<p>Take a final look before you checkout!</p>
@@ -28,15 +28,21 @@
 						<p class="item-name">Quiz Payment Status</p>
 					</div>
 					<div class="total">Total<span class="price">{{ quiz.parent_pricing_plan.price }}</span></div>
-					<button class="btn btn-warning" id="skip_payment" type="button">Pay Later</button>
+
 				</div>
 			</form>
-			<div class="col-md-12 p-4 ">
-				<div class="d-grid gap-2">
+			<div class="row g-0 pt-2 mb-3" style="padding-left: 25px;">
+				<div class ="col d-flex justify-content-evenly">
+					<button class="btn btn-warning" id="skip_payment" type="button">Pay Later</button>
+				</div>
+				<div class="col d-flex ">
+
 					{% block razorpay_payment_button %}
 					{% include 'forms/razorpay_quiz_create_payment_form.html' %}
 					{% endblock %}
 				</div>
+				
+
 			</div>
 		</div>
 	</section>
@@ -46,8 +52,8 @@
 {% endblock %}
 {% block ui_scripts %}
 <script type="text/javascript">
-	$('#skip_payment').click(function(){
-		if (confirm('You can always find your unpaid quizzes on your dashboard. Click OK to continue.')){
+	$('#skip_payment').click(function () {
+		if (confirm('You can always find your unpaid quizzes on your dashboard. Click OK to continue.')) {
 			window.location.replace('{{ url_for('user_dashboard.user_quiz_owned') }}');
 		}
 	});
