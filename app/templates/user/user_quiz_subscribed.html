@@ -18,15 +18,17 @@
 				<div class="ms-1 w-100">
 				
 					{% if quiz.parent_quiz.details %}
-					<h5 class="card-title" class="text-bold">{{ quiz.parent_quiz.details.name }}</h5>
-					<p class="card-text" class="text-normal ">Slots: {{ quiz.parent_quiz.details.current_players }} / {{ quiz.parent_quiz.parent_pricing_plan.total_players }}</p>
-					<p class="card-text"><small class="text-muted">{{ quiz.parent_quiz.details.date }} {{ quiz.parent_quiz.details.time }}</small></p>
-					{% if not quiz.payment_status %}
-					<button class="btn btn-sm btn-outline-warning">UNPAID</button>
-					{% endif %}
 					{% if not quiz.active %}
-					<button class="btn btn-sm btn-outline-info">Owner has deactivated this quiz :(</button>
+					<span class="badge bg-info">Inactive</span>
 					{% endif %}
+					<h5 class="card-title" class="text-bold">{{ quiz.parent_quiz.details.name }}</h5>
+					
+					<p class="card-text" class="text-normal ">Slots: {{ quiz.parent_quiz.details.current_players }} / {{ quiz.parent_quiz.parent_pricing_plan.total_players }}</p>
+					<p class="card-text"><small class="text-muted">{{ quiz.parent_quiz.details.date.strftime('%d-%m-%Y')  }} {{ quiz.parent_quiz.details.time.strftime('%H:%M')  }}</small></p>
+					{% if not quiz.payment_status %}
+					<button class="btn btn-sm btn-outline-warning">Unpaid</button>
+					{% endif %}
+					
 					{% endif %}
 				</div>
 			</div>

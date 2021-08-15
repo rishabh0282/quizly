@@ -26,8 +26,8 @@
 					</p>
 					{% endif %}
 					{% if quiz.active %}
-					<button class="btn btn-info" id="show_quiz_edit_form">Edit (Add edit icon here)</button>
-					<button class="btn btn-warning" id="quiz_toggle_active_status">Deactivate Quiz</button>
+					<button class="btn btn-info" id="show_quiz_edit_form"><i class="far fa-edit"></i> Edit</button>
+					<button class="btn btn-warning" id="quiz_toggle_active_status" style="vertical-align: middle;" 	><i class="far fa-times-circle"></i> Deactivate</button>
 					{% else %}
 					<p class="card-text">This quiz has been deactivated.</p>
 					<p class="card-text">Refund request Timestamp: <strong>{{ quiz.refund.request_date }} {{

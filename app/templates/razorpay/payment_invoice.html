@@ -27,8 +27,8 @@
 								<strong>{{ params_dict['razorpay_order_id'] }}</strong>
 							</div>
 							<div class="col-sm-6 text-end">
-								<span>Payment Timestamp</span>
-								<strong>{{ client.payment_date }} - {{ client.payment_time }}</strong>
+								<span>Payment Date & Time</span>
+								<strong>{{ client.payment_date.strftime('%d-%m-%Y') }} | {{ client.payment_time.strftime('%H:%M') }}</strong>
 							</div>
 						</div>
 					</div>
@@ -37,8 +37,7 @@
 						<div class="row">
 							<div class="col-sm-6">
 								<span>Client</span>
-								<strong>
-									{{ client.parent_user.username  }}
+								
 								</strong>
 								<p>
 									{{ client.parent_user.profile.first_name }} {{ client.parent_user.profile.last_name }}<br>
@@ -53,7 +52,7 @@
 									GetSetQuiz India
 								</strong>
 								<p>
-									[ Office address? ] <br>
+									
 									<a href="#">
 										{{ user_manager.USER_EMAIL_SENDER_EMAIL }}
 									</a>
@@ -110,9 +109,7 @@
 						</div>
 					</div>
 
-					<div class="footer">
-						Copyright © 2021. GetSetQuiz
-					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -124,6 +121,11 @@
 			</div>
 		{% endif %}		
 	</div>
+	<style>
+		body{
+			background-color: #ECEEF4 ;
+		}
+	</style>
 
 
 	{% endblock %}
