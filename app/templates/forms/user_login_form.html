@@ -20,7 +20,7 @@
                 {{ render_checkbox_field(form.remember_me, class='form-check-label') }}
               </div>
               <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                <a class="small" href="password.html">Forgot Password?</a>
+                <a class="small" href="{{ url_for('user.forgot_password') }}">Forgot Password?</a>
                 {{ render_button(form.submit, class='btn btn-info', value='Submit') }}
               </div>
             </form>
