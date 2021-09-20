@@ -14,7 +14,7 @@
 						<h2 class="mb-0 mt-0">{{ quiz.details.name }}</h2>
 						<div class="p-2 mt-2 d-flex justify-content-between">
 							<div class="d-flex flex-column">
-								<span class = "text-sm-start"><i class="far fa-calendar"></i> {{ quiz.details.date }}</span>
+								<span class = "text-sm-start"><i class="far fa-calendar"></i> {{ quiz.details.date.strftime('%d-%m-%Y') }} <i class="far fa-clock"></i>  {{quiz.details.time.strftime('%H:%M')}} </span>
 							</div>
 							<div class="d-flex flex-column">
 								<span class = " text-sm-end"><i class="fab fa-discord"></i> <a class = "text-decoration-none" href= "https://discord.io/getsetquiz"> https://discord.io/getsetquiz </a></span>
